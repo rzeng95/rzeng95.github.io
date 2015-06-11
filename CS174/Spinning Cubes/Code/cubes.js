@@ -24,7 +24,7 @@ var perspectiveMatrix;
 
 //Input Key operation variables. fov controls zoom, canRotate toggles rotation, amt controls rotation amount 
 var fov = 0;
-var canRotate = false;
+var canRotate = true;
 var amt = 0;
 var amt2 = 0;
 
