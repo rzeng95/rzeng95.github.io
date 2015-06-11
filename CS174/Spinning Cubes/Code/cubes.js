@@ -24,7 +24,7 @@ var perspectiveMatrix;
 
 //Input Key operation variables. fov controls zoom, canRotate toggles rotation, amt controls rotation amount 
 var fov = 0;
-var canRotate = true;
+var canRotate = false;
 var amt = 0;
 var amt2 = 0;
 
@@ -172,12 +172,12 @@ function initTextures() {
 	cubeTexture = gl.createTexture();
 	cubeImage = new Image();
 	cubeImage.onload = function() { handleTextureLoaded(cubeImage, cubeTexture); }
-	cubeImage.src = "./Images/mac.png";
+	cubeImage.src = "../Images/mac.png";
 
 	cubeTexture2 = gl.createTexture();
 	cubeImage2 = new Image();
 	cubeImage2.onload = function() { handleTextureLoaded2(cubeImage2, cubeTexture2); }
-	cubeImage2.src = "./Images/windows.png";
+	cubeImage2.src = "../Images/windows.png";
 }
 //For the first cube, we want to use nearest neighbor filtering 
 function handleTextureLoaded(image, texture) {
