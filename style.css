@@ -25,9 +25,9 @@ h2 {
 }
 
 /* Note: table width should be changed if long project name is entered */
-table tr td:first-child { width: 14em; } /* Project title cells */
+table tr td:first-child { width: 14em; } /* Project title cells width */
 
-/* Uncomment the below for debugging the table structure 
+/* Uncomment the below for debugging the table structure */
 /*
 table, th, td {
     border: 1px solid black;
@@ -43,5 +43,19 @@ td {
 	font-size: 1.1em;
 	height: 1.7em;
 }
+
+/* This is to get the intro text on the same line with different font sizes */
+p {
+	display:inline;
+	font-size: 1.1em;
+}
+h1{
+    display:inline;
+}
+pre {
+	display: inline;
+}
+
+
 
 
