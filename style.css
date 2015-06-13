@@ -1,3 +1,8 @@
+html * 
+{
+	font-family: "Times New Roman", Times, serif !important;
+}
+
 a:link {
     text-decoration: none;
 	color: #3333CC;
@@ -15,3 +20,28 @@ a:hover {
 a:active {
 	text-decoration: underline;
 }
+h2 {
+	font-size: 1.4em;
+}
+
+/* Note: table width should be changed if long project name is entered */
+table tr td:first-child { width: 14em; } /* Project title cells */
+
+/* Uncomment the below for debugging the table structure 
+/*
+table, th, td {
+    border: 1px solid black;
+}*/
+
+th {
+	text-align: left;
+	font-size: 1.4em;
+	height: 3em;
+}
+
+td {
+	font-size: 1.1em;
+	height: 1.7em;
+}
+
+
