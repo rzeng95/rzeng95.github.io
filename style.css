@@ -41,7 +41,7 @@ th {
 
 td {
 	font-size: 1.1em;
-	height: 1.7em;
+	height: 1.9em; /* Height of each project cell */
 }
 
 /* This is to get the intro text on the same line with different font sizes */
