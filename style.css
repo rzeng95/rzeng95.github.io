@@ -82,6 +82,12 @@ table, th, td {
     
 }
 
+/* Custom style for <hr> line break */
+hr {
+    border: 0;
+    height: 1.3px;
+    background-image: linear-gradient(to right, rgba(150, 50, 50, 1), rgba(0, 0, 0, 0));
+}
 
 
 
