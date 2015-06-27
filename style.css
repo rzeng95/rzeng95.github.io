@@ -1,61 +1,82 @@
-html * 
-{
-	font-family: "Times New Roman", Times, serif !important;
+/* Global Settings */
+
+body {
+	background: #F2F3F4; /* Background color of body */
+    color: #222222;      /* Text color of body */
+    margin:0 auto;       /* Gets rid of margins so our header extends full width of page */
+    min-width: 600px;
 }
 
-a:link {
+/* Hyperlink Style: No purple visited links, no underlining */ 
+a.one:link {
     text-decoration: none;
-	color: #3333CC;
+	/*color: #3333CC; */
 }
 
-a:visited {
+a.one:visited {
 	text-decoration: none;
-	color: #3333CC;
+	color: #222222;
 }
 
-a:hover {
-	text-decoration: underline;
+a.two:link {
+    text-decoration: none;
+	color: #3333CC; 
 }
 
-a:active {
-	text-decoration: underline;
-}
-h2 {
-	font-size: 1.4em;
+a.two:visited {
+	text-decoration: none;
+	color: #3333CC; 
 }
 
-/* Note: table width should be changed if long project name is entered */
-table tr td:first-child { width: 14em; } /* Project title cells width */
 
-/* Uncomment the below for debugging the table structure */
-/*
+
+
+
+/* Header Bar */
+
+#headline {
+    background-color: #373737; /*Background color of header */
+    color: #FFFFFF;            /* Text color inside header */ 
+    
+    height: 80px;              /* Height of header */ 
+    line-height:80px;
+    
+    text-align: center;
+}
+
+span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    
+    font-size: 45px;
+}
+
+
+/* Main Table */
+#main_table {
+    font-size:30px;
+    border-collapse: collapse; /* Single border between cells  */
+    margin: 0 auto;  /* This centers the main table in the middle of the screen */
+
+}
+
 table, th, td {
-    border: 1px solid black;
-}*/
-
-th {
-	text-align: left;
-	font-size: 1.4em;
-	height: 3em;
-}
-
-td {
-	font-size: 1.1em;
-	height: 1.9em; /* Height of each project cell */
-}
-
-/* This is to get the intro text on the same line with different font sizes */
-p {
-	display:inline;
-	font-size: 1.1em;
-}
-h1{
-    display:inline;
-}
-pre {
-	display: inline;
+    /*border: 1px solid black; */ 
+    /*width: 600px;*/
+    padding: 15px;
+    
 }
 
 
+.main_left {
+    /*border-right: solid thick #373737; */
+    width:200px;
+}
 
-
+.main_right {
+    vertical-align: top;
+    font-size: 20px;
+    width:500px;
+    
+}
