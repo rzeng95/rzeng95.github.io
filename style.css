@@ -18,12 +18,12 @@ a.one:visited {
 	color: #222222;
 }
 
-a.two:link {
+a:link {
     text-decoration: none;
 	color: #3333CC; 
 }
 
-a.two:visited {
+a:visited {
 	text-decoration: none;
 	color: #3333CC; 
 }
@@ -70,6 +70,7 @@ table, th, td {
 
 /* Left side of the main table, contains the side bar links */
 .main_left {
+    vertical-align: top;
     width:240px;
 }
 
@@ -85,8 +86,12 @@ table, th, td {
 /* Custom style for <hr> line break */
 hr {
     border: 0;
-    height: 1.3px;
+    height: 1px;
     background-image: linear-gradient(to right, rgba(150, 50, 50, 1), rgba(0, 0, 0, 0));
+}
+
+.indentedP {
+    padding-left: 30px;
 }
 
 
