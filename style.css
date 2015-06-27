@@ -7,10 +7,10 @@ body {
     min-width: 600px;
 }
 
-/* Hyperlink Style: No purple visited links, no underlining */ 
+/* Hyperlink Style: style "one" modifies the sidebar links, style "two" modifies body links */ 
 a.one:link {
     text-decoration: none;
-	/*color: #3333CC; */
+	color: #222222;
 }
 
 a.one:visited {
@@ -62,21 +62,27 @@ span {
 }
 
 table, th, td {
-    /*border: 1px solid black; */ 
-    /*width: 600px;*/
+    /*border: 1px solid black;*/  /* Uncomment this to debug table size */
     padding: 15px;
     
 }
 
 
+/* Left side of the main table, contains the side bar links */
 .main_left {
-    /*border-right: solid thick #373737; */
-    width:200px;
+    width:240px;
 }
 
+/* Right side of the main table, contains all the project descriptions etc */
 .main_right {
     vertical-align: top;
     font-size: 20px;
     width:500px;
+    padding-top: 0px;
     
 }
+
+
+
+
+
