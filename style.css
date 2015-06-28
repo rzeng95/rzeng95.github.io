@@ -71,14 +71,14 @@ table, th, td {
 /* Left side of the main table, contains the side bar links */
 .main_left {
     vertical-align: top;
-    width:240px;
+    width:240px; 
 }
 
 /* Right side of the main table, contains all the project descriptions etc */
 .main_right {
     vertical-align: top;
     font-size: 20px;
-    width:500px;
+    width:500px; 
     padding-top: 0px;
     
 }
@@ -94,6 +94,10 @@ hr {
     padding-left: 30px;
 }
 
+/* Makes the first line a tad bit bigger than the rest of the main_right text. */ 
+.body_header {
+    font-size: 20.5px;
+}
 
 
 
