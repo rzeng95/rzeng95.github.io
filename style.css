@@ -11,23 +11,12 @@ body {
 a.one:link {
     text-decoration: none;
 	color: #222222;
-    /*Fade compatability with different browsers. http://stackoverflow.com/questions/6008324/fade-effect-on-link-hover */
-    -o-transition:color .2s ease-out, background 1s ease-in;
-    -ms-transition:color .2s ease-out, background 1s ease-in;
-    -moz-transition:color .2s ease-out, background 1s ease-in;
-    -webkit-transition:color .2s ease-out, background 1s ease-in;
-    
-    transition:.5s;
 }
 
 a.one:visited {
 	text-decoration: none;
 	color: #222222;
    
-}
-
-a.one:hover {
-    color: #963232;
 }
 
 a:link {
