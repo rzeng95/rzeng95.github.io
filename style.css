@@ -20,9 +20,10 @@ a.cur:link {
 a.cur:visited {
 	text-decoration: none;
 	color: #222222;
-    
+    /*
     border-bottom-style: solid;
     border-width: 2px;   
+    */
 }
 
 
