@@ -8,16 +8,35 @@ body {
 }
 
 /* Hyperlink Style: style "one" modifies the sidebar links, else "a" modifies body links */ 
-a.one:link {
+
+a.cur:link {
+    text-decoration: none;
+	color: #222222;
+
+    border-bottom-style: solid;
+    border-width: 2px;
+}
+
+a.cur:visited {
+	text-decoration: none;
+	color: #222222;
+    
+    border-bottom-style: solid;
+    border-width: 2px;   
+}
+
+
+a.other:link {
     text-decoration: none;
 	color: #222222;
 }
 
-a.one:visited {
+a.other:visited {
 	text-decoration: none;
 	color: #222222;
    
 }
+
 
 a:link {
     text-decoration: none;
