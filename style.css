@@ -7,7 +7,7 @@ body {
     min-width: 600px;
 }
 
-/* Hyperlink Style */ 
+/* Hyperlink Style : the current sidebar menu's link on the sidebar will be underlined; all other links do not have the underline*/ 
 
 a.cur:link {
     text-decoration: none;
@@ -38,6 +38,7 @@ a.other:visited {
    
 }
 
+/* Default (project) links are still blue */
 
 a:link {
     text-decoration: none;
