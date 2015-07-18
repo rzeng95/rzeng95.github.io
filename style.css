@@ -1,5 +1,10 @@
 /* Global Settings */
 
+html * 
+{
+    font-family: sans-serif;
+}
+
 body {
 	background: #F2F3F4; /* Background color of body */
     color: #222222;      /* Text color of body */
@@ -12,9 +17,9 @@ body {
 a.cur:link {
     text-decoration: none;
 	color: #222222;
-
-    border-bottom-style: solid;
-    border-width: 2px;
+    font-weight: bold;
+    /*border-bottom-style: solid;*/
+    /*border-width: 2px;*/
 }
 
 a.cur:visited {
@@ -74,13 +79,18 @@ span {
     font-size: 45px;
 }
 
+/* Second Header Bar */
+#headline2 {
+    background-color: #737373;
+    height: 2px; 
+}
+
 
 /* Main Table */
 #main_table {
     font-size:30px;
     border-collapse: collapse; /* Single border between cells  */
     margin: 0 auto;  /* This centers the main table in the middle of the screen */
-
 }
 
 table, th, td {
@@ -93,16 +103,17 @@ table, th, td {
 /* Left side of the main table, contains the side bar links */
 .main_left {
     vertical-align: top;
-    width:240px; 
+    width:230px; 
+    /*background-color: #E6E6E6; */ /* can't get this to extend entire height of page for */
 }
 
 /* Right side of the main table, contains all the project descriptions etc */
 .main_right {
     vertical-align: top;
+    width:515px; 
     font-size: 20px;
-    width:500px; 
+
     padding-top: 0px;
-    
 }
 
 /* Custom style for <hr> line break */
