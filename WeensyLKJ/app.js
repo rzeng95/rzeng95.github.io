@@ -2,11 +2,13 @@ var API_KEY = "24d2095f-cf69-4825-b333-d1f126105016"; //This is MY API key.
 
 function summonerLookUp() {
     "use strict";
-    var summonerLevel, REGION, SUMMONER_NAME, URL, summonerID;
+    var summonerLevel, REGION, SUMMONER_NAME, SUMMONER_NAME_CLEANED, URL, summonerID;
     
     REGION = $("#region").val();
     REGION = REGION.toLowerCase();
     SUMMONER_NAME = $("#summoner").val();
+    SUMMONER_NAME_CLEANED = SUMMONER_NAME.replace(" ", "");
+    SUMMONER_NAME_CLEANED = SUMMONER_NAME_CLEANED.toLowerCase().replace(/\s+/g, '');
     
     document.getElementById("o_error").innerHTML = "";
     document.getElementById("o_name").innerHTML = "";
@@ -25,12 +27,8 @@ function summonerLookUp() {
 
             },
             success: function (json) {
-                var SUMMONER_NAME_NOSPACES = SUMMONER_NAME.replace(" ", "");
-
-                SUMMONER_NAME_NOSPACES = SUMMONER_NAME_NOSPACES.toLowerCase().trim();
-
-                summonerID = json[SUMMONER_NAME_NOSPACES].id;
-                summonerLevel = json[SUMMONER_NAME_NOSPACES].summonerLevel;
+                summonerID = json[SUMMONER_NAME_CLEANED].id;
+                summonerLevel = json[SUMMONER_NAME_CLEANED].summonerLevel;
 
                 if (summonerLevel < 30) {
                     document.getElementById("o_error").innerHTML = "Summoner is not level 30 yet!";
