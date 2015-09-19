@@ -2,7 +2,7 @@ var API_KEY = "24d2095f-cf69-4825-b333-d1f126105016"; //This is MY API key.
 
 function summonerLookUp() {
     "use strict";
-    var summonerLevel, REGION, SUMMONER_NAME, SUMMONER_NAME_CLEANED, URL, summonerID;
+    var summonerLevel, REGION, SUMMONER_NAME, SUMMONER_NAME_CLEANED, URL, summonerID, summonerIcon;
     
     REGION = $("#region").val();
     REGION = REGION.toLowerCase();
@@ -10,6 +10,7 @@ function summonerLookUp() {
     SUMMONER_NAME_CLEANED = SUMMONER_NAME.replace(" ", "");
     SUMMONER_NAME_CLEANED = SUMMONER_NAME_CLEANED.toLowerCase().replace(/\s+/g, '');
     
+    document.getElementById("o_icon").innerHTML="";
     document.getElementById("o_error").innerHTML = "";
     document.getElementById("o_name").innerHTML = "";
     document.getElementById("o_rank").innerHTML = "";
@@ -29,10 +30,10 @@ function summonerLookUp() {
             success: function (json) {
                 summonerID = json[SUMMONER_NAME_CLEANED].id;
                 summonerLevel = json[SUMMONER_NAME_CLEANED].summonerLevel;
-
+                summonerIcon = json[SUMMONER_NAME_CLEANED].profileIconId;
                 if (summonerLevel < 30) {
                     document.getElementById("o_error").innerHTML = "Summoner is not level 30 yet!";
-                } else {rankLookUp(REGION, summonerID); }
+                } else {rankLookUp(REGION, summonerID, summonerIcon); }
 
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -56,7 +57,7 @@ function summonerLookUp() {
     }
 }
 
-function rankLookUp(region, sumID) {
+function rankLookUp(region, sumID, sumIcon) {
     "use strict";
     var URL2, summonerName, summonerTier, summonerDivision, summonerLP;
 
@@ -78,7 +79,9 @@ function rankLookUp(region, sumID) {
         
             document.getElementById("o_name").innerHTML = summonerName;
             document.getElementById("o_rank").innerHTML = summonerTier + ' ' + summonerDivision + ' ' + summonerLP + ' LP';
-            
+            var img = document.createElement("img");
+            img.src = "http://ddragon.leagueoflegends.com/cdn/5.18.1/img/profileicon/" + sumIcon + ".png";
+            document.getElementById("o_icon").appendChild(img);
             //document.getElementById("o_response2").innerHTML = URL2;
             //document.getElementById("o_response2").innerHTML = JSON.stringify(json);
             
