@@ -1,82 +1,16 @@
-/* Global Settings */
-
 html * 
 {
     font-family: sans-serif;
 }
 
-body {
-	background: #F2F3F4; /* Background color of body */
-    color: #222222;      /* Text color of body */
-    margin:0 auto;       /* Gets rid of margins so our header extends full width of page */
-    min-width: 600px;
-}
-
-/* Hyperlink Style : the current sidebar menu's link on the sidebar will be underlined; all other links do not have the underline*/ 
-
-a.cur:link {
-    text-decoration: none;
-	color: #222222;
-    font-weight: bold;
-    /*border-bottom-style: solid;*/
-    /*border-width: 2px;*/
-}
-
-a.cur:visited {
-	text-decoration: none;
-	color: #222222;
-    /*
-    border-bottom-style: solid;
-    border-width: 2px;   
-    */
-}
-
-
-a.other:link {
-    text-decoration: none;
-	color: #222222;
-}
-
-a.other:visited {
-	text-decoration: none;
-	color: #222222;
-   
-}
-
-/* Default (project) links are still blue */
-
-a:link {
-    text-decoration: none;
-	color: #3333CC; 
-}
-
-a:visited {
-	text-decoration: none;
-	color: #3333CC; 
-}
-
-
-
-
-
 /* Header Bar */
-
 #headline {
     background-color: #373737; /*Background color of header */
     color: #FFFFFF;            /* Text color inside header */ 
-    
-    height: 80px;              /* Height of header */ 
+ 
     line-height:80px;
-    
-    text-align: center;
-}
-
-span {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
-    
     font-size: 45px;
+    
 }
 
 /* Second Header Bar */
@@ -86,51 +20,34 @@ span {
 }
 
 
-/* Main Table */
-#main_table {
-    font-size:30px;
-    border-collapse: collapse; /* Single border between cells  */
-    margin: 0 auto;  /* This centers the main table in the middle of the screen */
+#sidebar {
+    font-size:25px;
 }
 
-table, th, td {
-    /*border: 1px solid black;*/  /* Uncomment this to debug table size */
-    padding: 15px;
-    
+p {
+    font-size:20px;
+}
+.indentedP {
+    padding-left: 30px;
+    font-size: 18px;
+}
+body {
+    background: #F2F3F4; /* Background color of body */
+    color: #222222;      /* Text color of body */
+}
+#fixed-width {
+    max-width: 300px;
 }
 
-
-/* Left side of the main table, contains the side bar links */
-.main_left {
-    vertical-align: top;
-    width:230px; 
-    /*background-color: #E6E6E6; */ /* can't get this to extend entire height of page for */
+.body_header {
+    padding-top: 15px;
+    font-size: 22px;
 }
-
-/* Right side of the main table, contains all the project descriptions etc */
-.main_right {
-    vertical-align: top;
-    width:515px; 
-    font-size: 20px;
-
-    padding-top: 0px;
-}
-
-/* Custom style for <hr> line break */
 hr {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, #963232, #FFFFFF);
 }
-
-.indentedP {
-    padding-left: 30px;
+a {
+    font-size: 20px;   
 }
-
-/* Makes the first line a tad bit bigger than the rest of the main_right text. */ 
-.body_header {
-    font-size: 20.5px;
-}
-
-
-
